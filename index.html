@@ -44,5 +44,28 @@
     </div>
 
     <button id="next-step">Next Step</button>
+
+    
+    <script>
+      const nextStepButton = document.getElementById("next-step");
+      const trafficLight = document.getElementById("traffic-light");
+
+      const goNextStep = () => {
+        if (trafficLight.classList.contains("red")) {
+          trafficLight.classList.remove("red");
+          trafficLight.classList.add("green");
+        } else if (trafficLight.classList.contains("yellow")) {
+          trafficLight.classList.remove("yellow");
+          trafficLight.classList.add("red");
+        } else {
+          trafficLight.classList.remove("green");
+          trafficLight.classList.add("yellow");
+        }
+      }
+
+      nextStepButton.onclick = goNextStep;
+
+      setInterval(goNextStep, 5000);
+    </script>
   </body>
 </html>
