@@ -4,6 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .traffic-light {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 200px;
+        height: 600px;
+        border: 1px solid blue;
+      }
+
+      .traffic-light div {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: gray;
+      }
+
+      .traffic-light.green div:nth-child(3) {
+        background: green;
+      }
+
+      .traffic-light.red div:nth-child(1) {
+        background: red;
+      }
+
+      .traffic-light.yellow div:nth-child(2) {
+        background: orange;
+      }
+    </style>
   </head>
   <body>
     <div id="traffic-light" class="traffic-light green">
